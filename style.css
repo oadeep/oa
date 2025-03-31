@@ -13,7 +13,7 @@ body {
     overflow: hidden; 
     position: relative;
     background: url('Untitleddesign-ezgif.com-video-to-gif-converter.gif') no-repeat center center fixed;
-    background-size: 450% 450%; 
+    background-size: 200%; 
     background-position: center center;
     backdrop-filter: blur(2px); 
 }
