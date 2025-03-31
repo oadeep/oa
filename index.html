@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
@@ -21,15 +20,13 @@
         </div>
     </div>
 
-    <!-- Spotify Embed (for example) -->
-    <iframe src="https://open.spotify.com/track/33V6tn1nIJRvsxQFvGvh3W?si=86916a534f314bf2" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
-    <!-- Audio Player (if not using Spotify) -->
-    <!-- <audio id="audio-player" controls>
-        <source src="your-audio-file.mp3" type="audio/mp3">
+    <!-- Audio Player -->
+    <audio id="audio-player" controls>
+        <source src=".mp3" type="audio/mp3">
         Your browser does not support the audio element.
-    </audio> -->
+    </audio>
 
+    <!-- Mute Button -->
     <button id="mute-btn" class="mute-btn">Mute</button>
     
     <img src="oadeapdog.png" alt="Corner Image" class="corner-img">
@@ -37,18 +34,11 @@
     <script>
         // Mute functionality
         const muteBtn = document.getElementById('mute-btn');
-        const audioPlayer = document.getElementById('audio-player'); // If you're using a regular audio tag
-        const iframe = document.querySelector('iframe'); // Spotify embed
+        const audioPlayer = document.getElementById('audio-player');
 
         muteBtn.addEventListener('click', function() {
-            if (audioPlayer) {
-                audioPlayer.muted = !audioPlayer.muted;
-                muteBtn.textContent = audioPlayer.muted ? 'Unmute' : 'Mute';
-            } else if (iframe) {
-                // If you're using the Spotify iframe, mute the audio (this needs additional logic)
-                // For Spotify, this may require user interaction or using Spotify's Web API
-                console.log('Mute functionality not supported for Spotify embed.');
-            }
+            audioPlayer.muted = !audioPlayer.muted;
+            muteBtn.textContent = audioPlayer.muted ? 'Unmute' : 'Mute';
         });
     </script>
 </body>
