@@ -11,7 +11,6 @@ body {
     overflow: hidden;
 }
 
-/* Background GIF */
 .background-gif {
     position: fixed;
     top: 0;
@@ -19,8 +18,7 @@ body {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: -1;
-    filter: blur(1px);
+    z-index: -2;
 }
 
 .container {
@@ -45,11 +43,11 @@ img {
     margin-bottom: 12px;
 }
 
-/* Corner image styling */
 .corner-img {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 150px;
-    height: 150px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: auto;
+    z-index: 10;
 }
