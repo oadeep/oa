@@ -49,7 +49,7 @@ body {
     color: #0073e6;
     font-size: 1.2rem;
     transition: color 0.3s ease;
-    display: center;
+    display: flex;
     align-items: center;
     gap: 8px;
 }
