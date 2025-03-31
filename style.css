@@ -15,7 +15,7 @@ body {
     background: url('Untitleddesign-ezgif.com-video-to-gif-converter.gif') no-repeat center center fixed;
     background-size: cover; 
     background-position: center center;
-    filter: blur(8px);
+    backdrop-filter: blur(1px);
 }
 
 .container {
