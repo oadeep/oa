@@ -20,8 +20,36 @@
             </a>
         </div>
     </div>
+
+    <!-- Spotify Embed (for example) -->
+    <iframe src="https://open.spotify.com/track/33V6tn1nIJRvsxQFvGvh3W?si=86916a534f314bf2" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+    <!-- Audio Player (if not using Spotify) -->
+    <!-- <audio id="audio-player" controls>
+        <source src="your-audio-file.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio> -->
+
+    <button id="mute-btn" class="mute-btn">Mute</button>
     
     <img src="oadeapdog.png" alt="Corner Image" class="corner-img">
 
+    <script>
+        // Mute functionality
+        const muteBtn = document.getElementById('mute-btn');
+        const audioPlayer = document.getElementById('audio-player'); // If you're using a regular audio tag
+        const iframe = document.querySelector('iframe'); // Spotify embed
+
+        muteBtn.addEventListener('click', function() {
+            if (audioPlayer) {
+                audioPlayer.muted = !audioPlayer.muted;
+                muteBtn.textContent = audioPlayer.muted ? 'Unmute' : 'Mute';
+            } else if (iframe) {
+                // If you're using the Spotify iframe, mute the audio (this needs additional logic)
+                // For Spotify, this may require user interaction or using Spotify's Web API
+                console.log('Mute functionality not supported for Spotify embed.');
+            }
+        });
+    </script>
 </body>
 </html>
