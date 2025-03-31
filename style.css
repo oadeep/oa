@@ -13,9 +13,9 @@ body {
     overflow: hidden; 
     position: relative;
     background: url('Untitleddesign-ezgif.com-video-to-gif-converter.gif') no-repeat center center fixed;
-    background-size: cover; /* Ensures full screen size */
+    background-size: cover; 
     background-position: center center;
-    filter: blur(8px); /* Optional: Apply blur effect */
+    filter: blur(8px);
 }
 
 .container {
@@ -51,7 +51,7 @@ body {
     transition: color 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 8px; /* Adds space between the icon and the text */
+    gap: 8px;
 }
 
 .socials a:hover {
@@ -59,7 +59,7 @@ body {
 }
 
 .socials i {
-    font-size: 1.5rem; /* Adjusts the size of the Instagram icon */
+    font-size: 1.5rem;
 }
 
 .corner-img {
