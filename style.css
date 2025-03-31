@@ -42,9 +42,9 @@ body {
 
 .socials {
     margin-top: 15px;
-    display: flex; /* Align items in a row */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .socials a {
