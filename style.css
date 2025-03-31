@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url(Untitleddesign-ezgif.com-video-to-gif-converter.gif) no-repeat center center/cover;
+    background: src(Untitleddesign-ezgif.com-video-to-gif-converter.gif) no-repeat center center/cover;
     background-size: cover; 
     backdrop-filter: blur(1px); 
     position: relative;
