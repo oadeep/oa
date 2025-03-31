@@ -73,3 +73,22 @@ body {
     height: auto;
     z-index: 10;
 }
+
+.mute-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: rgba(0, 115, 230, 0.85);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.mute-btn:hover {
+    background-color: rgba(0, 115, 230, 1);
+}
