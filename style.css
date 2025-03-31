@@ -12,16 +12,10 @@ body {
     height: 100vh;
     overflow: hidden; 
     position: relative;
-}
-
-.background-gif {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
+    background: url('Untitleddesign-ezgif.com-video-to-gif-converter.gif') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center center; 
+    backdrop-filter: blur(1px);
 }
 
 .container {
