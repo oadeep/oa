@@ -20,26 +20,7 @@
         </div>
     </div>
 
-    <!-- Audio Player -->
-    <audio id="audio-player" controls>
-        <source src="1. H00DBYAIR.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-
-    <!-- Mute Button -->
-    <button id="mute-btn" class="mute-btn">Mute</button>
-    
     <img src="oadeapdog.png" alt="Corner Image" class="corner-img">
 
-    <script>
-        // Mute functionality
-        const muteBtn = document.getElementById('mute-btn');
-        const audioPlayer = document.getElementById('audio-player');
-
-        muteBtn.addEventListener('click', function() {
-            audioPlayer.muted = !audioPlayer.muted;
-            muteBtn.textContent = audioPlayer.muted ? 'Unmute' : 'Mute';
-        });
-    </script>
 </body>
 </html>
