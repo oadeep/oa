@@ -66,9 +66,4 @@ body {
 
 .corner-img {
     position: center;
-    bottom: 20px;
-    right: 20px;
-    width: 100px;
-    height: auto;
-    z-index: 10;
 }
