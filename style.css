@@ -8,6 +8,7 @@ body {
     font-family: 'Inter', sans-serif;
     justify-content: center;
     align-items: center;
+    align-content: center;
     height: 100vh;
     overflow: hidden; 
     position: relative;
@@ -66,4 +67,5 @@ body {
 
 .corner-img {
     position: center;
+height: auto;
 }
