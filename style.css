@@ -141,3 +141,69 @@ body {
     justify-content: center; */
 
 }
+
+.webring-button {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+.webring-button a {
+    background-color: #ffffffcc;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.webring-button a:hover {
+    background-color: #e0e0e0;
+}
+
+.webring-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.webring-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.webring-list li {
+    margin: 10px 0;
+}
+
+.webring-list a {
+    color: #0073e6;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.webring-list a:hover {
+    text-decoration: underline;
+}
+
+.back-button {
+    margin-top: 30px;
+    padding: 8px 16px;
+    background: #0073e6;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background: #005bb5;
+}
