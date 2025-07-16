@@ -7,7 +7,7 @@
 body {
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
-  background: url('https://tenor.com/view/nurburgring-nordschleife-vln-n24-gt3-gif-21222384') no-repeat center center fixed;
+  background: url('https://media.tenor.com/8EdLbHQZ9kUAAAAC/nurburgring-night.gif') no-repeat center center fixed;
   background-size: cover;
   backdrop-filter: blur(4px);
   display: flex;
@@ -17,6 +17,7 @@ body {
   padding-left: 1em;
   padding-right: 1em;
 }
+
 
 /* Navbar */
 .navbar {
