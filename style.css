@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   background: url('Untitleddesign-ezgif.com-video-to-gif-converter.gif') no-repeat center center fixed;
   background-size: cover;
   backdrop-filter: blur(4px);
@@ -14,6 +14,8 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /* Navbar */
@@ -23,6 +25,7 @@ body {
   left: 20px;
   right: 20px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   z-index: 50;
@@ -37,7 +40,9 @@ body {
 
 .nav-buttons {
   display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
   margin-right: 20px;
 }
 
@@ -50,6 +55,7 @@ body {
   font-weight: bold;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: background 0.3s;
+  font-size: 0.9rem;
 }
 
 .nav-buttons a:hover {
@@ -64,8 +70,9 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
   max-width: 600px;
-  width: 90%;
+  width: 100%;
   z-index: 10;
+  margin-bottom: 2em;
 }
 
 .main-box h1 {
@@ -86,6 +93,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
+  margin-top: 1em;
 }
 
 .socials a {
@@ -107,13 +115,13 @@ body {
 
 /* Spotify Player */
 .spotify-player {
-  margin-top: 24px;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3em;
 }
 
 /* Corner Image */
@@ -121,8 +129,36 @@ body {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  width: 100px;
+  width: 80px;
   height: auto;
   border-radius: 0;
   z-index: 5;
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-buttons {
+    margin: 10px 0 0 0;
+    justify-content: center;
+  }
+
+  .main-box {
+    padding: 20px;
+  }
+
+  .main-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-box p {
+    font-size: 0.95rem;
+  }
+
+  .corner-img {
+    width: 60px;
+  }
 }
