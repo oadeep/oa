@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Server Files</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="navbar">
+    <img src="https://cdn-images.dzcdn.net/images/cover/b34635702cc880f72be0618adb40106d/1900x1900-000000-80-0-0.jpg" alt="Profile" class="navbar-profile">
+    <div class="nav-buttons">
+      <a href="index.html">Home</a>
+      <a href="webring.html">Friends?</a>
+      <a href="files.html">Server Files</a>
+    </div>
+  </div>
+
+  <div class="main-box">
+    <h1>Server Files</h1>
+    <p>Type a server URL that returns a JSON array of file names:</p>
+    <input id="server-url" type="text" placeholder="https://example.com/files.json"/>
+    <button id="load-files">Load Files</button>
+    <ul id="files"></ul>
+  </div>
+
+  <img src="oadeapdog.png" alt="Corner Dog" class="corner-img">
+
+  <script>
+    document.getElementById('load-files').addEventListener('click', async () => {
+      const url = document.getElementById('server-url').value.trim();
+      if (!url) return;
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        const list = document.getElementById('files');
+        list.innerHTML = '';
+        data.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item;
+          list.appendChild(li);
+        });
+      } catch (err) {
+        alert('Could not load files: ' + err.message);
+      }
+    });
+  </script>
+
+</body>
+</html>
