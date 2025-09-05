@@ -125,6 +125,25 @@ body {
   margin-bottom: 3em;
 }
 
+/* File Fetcher */
+.main-box input, .main-box button {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.main-box button {
+  background-color: #ffffffcc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.main-box button:hover {
+  background-color: #e0e0e0;
+}
+
+
 /* Corner Image */
 .corner-img {
   position: fixed;
