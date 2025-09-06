@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +20,8 @@
 
   <div class="main-box">
     <h1>Server Files</h1>
-    <p>Type a server URL that returns a JSON array of file names:</p>
-    <input id="server-url" type="text" placeholder="https://example.com/files.json"/>
+    <p>Type a server URL that returns a JSON array of file names (or full URLs with <code>?urls=1</code>):</p>
+    <input id="server-url" type="text" placeholder="http://192.168.2.40:3000/files.json"/>
     <button id="load-files">Load Files</button>
     <ul id="files"></ul>
   </div>
@@ -30,21 +29,42 @@
   <img src="oadeapdog.png" alt="Corner Dog" class="corner-img">
 
   <script>
-    document.getElementById('load-files').addEventListener('click', async () => {
-      const url = document.getElementById('server-url').value.trim();
+    const $ = sel => document.querySelector(sel);
+
+    $('#load-files').addEventListener('click', async () => {
+      const url = $('#server-url').value.trim();
       if (!url) return;
+
       try {
-        const res = await fetch(url);
+        const res = await fetch(url, { mode: 'cors' });
+        if (!res.ok) {
+          const text = await res.text().catch(() => '');
+          throw new Error(`HTTP ${res.status} ${res.statusText}${text ? ' - ' + text.slice(0,200) : ''}`);
+        }
+
         const data = await res.json();
-        const list = document.getElementById('files');
+        if (!Array.isArray(data)) throw new Error('Response JSON is not an array.');
+
+        const list = $('#files');
         list.innerHTML = '';
+
         data.forEach(item => {
           const li = document.createElement('li');
-          li.textContent = item;
+          if (typeof item === 'string' && /^https?:\/\//i.test(item)) {
+            const a = document.createElement('a');
+            a.href = item;
+            a.textContent = decodeURIComponent(item.split('/').pop());
+            a.target = '_blank';
+            a.rel = 'noopener';
+            li.appendChild(a);
+          } else {
+            li.textContent = String(item);
+          }
           list.appendChild(li);
         });
       } catch (err) {
         alert('Could not load files: ' + err.message);
+        console.error(err);
       }
     });
   </script>
